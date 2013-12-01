@@ -1,0 +1,5 @@
+file exceptions
+directory ./
+set breakpoint pending on
+break exceptions.cpp:25
+run

@@ -1,0 +1,5 @@
+1. cast to void* call delete (done, compile time error)
+2. check address of the class and its first member (first member address is always 4 bytes larger then class object address)
+3. do overload for each operator.
+4. write an exception
+5. Pointer arithmetics works on the array of structs as usual.

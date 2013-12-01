@@ -1,0 +1,30 @@
+#include <string>
+#include <memory>
+#include <iostream>
+
+using namespace std;
+
+class TestAutoPtr
+{
+public:
+    TestAutoPtr(string& sName)
+    {
+        m_sName = sName;
+        cout << "TestAutoPtr constructor" << endl;
+    }    
+    TestAutoPtr(TestAutoPtr& rhs) 
+    {
+        m_sName = rhs.m_sName;
+        cout << "TestAutoPtr CopyConstructor" << endl;
+    }    
+    ~TestAutoPtr() {cout << "TestAutoPtr Destructor" << endl;}
+private:
+    string m_sName;
+};
+
+int main(int argc, char* argv[])
+{
+    string testString("first");
+    auto_ptr<TestAutoPtr> ptr(new TestAutoPtr(testString));
+    return 0;
+}

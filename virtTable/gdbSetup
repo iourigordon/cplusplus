@@ -1,0 +1,4 @@
+file virt_table
+set breakpoint pending on
+break virt_table.cpp:25
+run
